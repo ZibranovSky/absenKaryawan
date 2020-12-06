@@ -67,4 +67,7 @@ maka dari itu, dibuatlah web aplikasi ini untuk mempermudah proses absensi.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Jika ada bagian yang error atau yang ada ingin ditambahkan mohon hubungi :
 1. Whatsapp = 0895635729348<br>
-<strong> HARAP JANGAN MENGUBAH COPYRIGHT YANG ADA DI FOOTER WEBSITE!</strong>
+
+<strong> PERINGATAN : </strong><br>
+1. Dilarang mengkomersilkan project ini tanpa sepengetahuan saya<br>
+2. Dilarang mengubah nama di footer web
