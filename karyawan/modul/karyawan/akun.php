@@ -153,7 +153,7 @@
   </div>
 
    <div class="form-group">
-    <label>Foto Admin</label>
+    <label>Foto Karyawan</label>
     <br>
      <?php 
 
