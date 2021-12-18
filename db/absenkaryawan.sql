@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2020 at 02:26 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.9
+-- Generation Time: Dec 18, 2021 at 07:34 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -50,6 +50,12 @@ CREATE TABLE `tb_absen` (
   `nip` text NOT NULL,
   `nama` text NOT NULL,
   `tanggal` text NOT NULL,
+  `bulan` varchar(255) NOT NULL,
+  `tahun` varchar(255) NOT NULL,
+  `keterangan` varchar(255) NOT NULL,
+  `kehadiran` varchar(255) NOT NULL,
+  `alasan` varchar(255) NOT NULL,
+  `foto` varchar(255) NOT NULL,
   `jam` text NOT NULL,
   `jam2` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -58,9 +64,9 @@ CREATE TABLE `tb_absen` (
 -- Dumping data for table `tb_absen`
 --
 
-INSERT INTO `tb_absen` (`id`, `nip`, `nama`, `tanggal`, `jam`, `jam2`) VALUES
-(31, '191202191202', 'Muhammad Zibran', '06-12-2020', '09:34 am', '0934'),
-(33, '28938932', 'karyawan', '06-12-2020', '03:32 pm', '0332');
+INSERT INTO `tb_absen` (`id`, `nip`, `nama`, `tanggal`, `bulan`, `tahun`, `keterangan`, `kehadiran`, `alasan`, `foto`, `jam`, `jam2`) VALUES
+(49, '28938932', 'karyawan', '18-12-2021', 'Desember', '2021', 'Sakit', '', 'saya sakit pak', '541-Screenshot (46).png', '06:19 am', '0619'),
+(51, '321029118283033', 'ucup', '18-12-2021', 'Desember', '2021', 'null', 'Hadir', 'null', 'null', '01:32 pm', '0132');
 
 -- --------------------------------------------------------
 
@@ -109,7 +115,8 @@ CREATE TABLE `tb_karyawan` (
 
 INSERT INTO `tb_karyawan` (`id`, `nip`, `username`, `password`, `nama`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `kontak`, `foto`) VALUES
 (23, '28938932', 'karyawan', '9e014682c94e0f2cc834bf7348bda428', 'karyawan', 'Jakarta Pusat', '2020-12-16', 'Jakarta Pusat', 'Aldo@gmail.com', ''),
-(25, '191202191202', 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'Kliment Voroshilov', 'Bogor', '2020-12-15', 'Klapanunggal', 'zibran@gmail.com', '897-gray_blank.png');
+(25, '191202191202', 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'Kliment Voroshilov', 'Bogor', '2020-12-15', 'Klapanunggal', 'zibran@gmail.com', '897-gray_blank.png'),
+(26, '321029118283033', 'ucup', '1e17778d0d8217b035daffba02c06054', 'ucup', 'Bogor', '1991-12-01', 'banten', 'ucup@gmail.com', '');
 
 -- --------------------------------------------------------
 
@@ -176,7 +183,7 @@ ALTER TABLE `jam_masuk`
 -- AUTO_INCREMENT for table `tb_absen`
 --
 ALTER TABLE `tb_absen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `tb_admin`
@@ -188,7 +195,7 @@ ALTER TABLE `tb_admin`
 -- AUTO_INCREMENT for table `tb_karyawan`
 --
 ALTER TABLE `tb_karyawan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `tb_keterangan`

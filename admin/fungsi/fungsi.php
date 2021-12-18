@@ -236,7 +236,7 @@ function hapus_absen()
 function select_keterangan()
 {
 	global $koneksi;
-	$select = mysqli_query($koneksi, "SELECT count(id) AS jket FROM tb_keterangan");
+	$select = mysqli_query($koneksi, "SELECT count(id) AS jket FROM tb_absen");
 	$row = mysqli_fetch_array($select);
 	echo $row['jket'];
 }
@@ -269,6 +269,15 @@ function select_keterangan1(){
 	$tanggal = $_GET['tanggal'];
 	return mysqli_query($koneksi, "SELECT * FROM tb_absen WHERE nip='$nip' AND tanggal='$tanggal'");
 
+}
+
+// select rekap
+
+function print_rekap(){
+	global $koneksi;
+	$bulan = $_GET['bulan'];
+	$tahun = $_GET['tahun'];
+	return mysqli_query($koneksi, "SELECT * FROM tb_absen WHERE bulan='$bulan' AND tahun='$tahun'");
 }
 
 // ----------------------------------------FUNCTION URL, KEEP IT BELOW!!------------------------------------------------------------------
