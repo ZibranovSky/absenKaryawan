@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test sweet alert</title>
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
+
+</head>
+<body onload="sweetAlert()">
+	<p id="text">zibran</p>
+	<button onclick="sweetAlert()">click me</button>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
+<script type="text/javascript">
+	function sweetAlert(){
+		var name = document.getElementById("text").innerHTML;
+		swal("Good job!", "Welcome "+name, "success");
+	}
+</script>
+</body>
+</html>

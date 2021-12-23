@@ -44,6 +44,10 @@
     <!-- data table -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 
+    <!-- sweet alert -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+
 </head>
 
 <body class="animsition">
@@ -60,7 +64,7 @@
                     <div class="image img-cir img-120">
                         <img src="img/<?=$adm['foto'];?>" alt="John Doe" />
                     </div>
-                    <h4 class="name"><?=$adm['nama'];?></h4>
+                    <h4 class="name" id="nama"><?=$adm['nama'];?></h4>
                     <a href="logout.php"><button class="btn btn-danger">Sign out</button></a>
                 </div>
                 <nav class="navbar-sidebar2">

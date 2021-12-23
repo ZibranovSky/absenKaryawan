@@ -48,6 +48,10 @@
     <!-- Main CSS-->
     <link href="<?=url()?>css/theme.css" rel="stylesheet" media="all">
 
+    <!-- sweet alert -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+
     <style type="text/css">
      
 
@@ -66,7 +70,7 @@
 
 </head>
 
-<body class="animsition">
+<body class="animsition" onload="sweetAlert()">
     <div class="page-wrapper">
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar2">
@@ -91,7 +95,7 @@
                          ?>
                       
                     </div>
-                    <h4 class="name"><?=$adm['nama'];?></h4>
+                    <h4 class="name" id="nama"><?=$adm['nama'];?></h4>
                     <a href="logout.php"><button class="btn btn-danger">Sign out</button></a><br>
                       <div id="MyClockDisplay" class="clock col-sm-20" onload="showTime()"></div>
                 </div>

@@ -5,6 +5,11 @@ if (isset($_POST['ubah'])) {
 	ubah_jam_masuk();
 }
 
+if (isset($_POST['ubah_jam_keluar'])) {
+	ubah_jam_keluar();
+}
+
+
  ?>
 <div class="main-content">
 	<div class="section__content section__content--p30">
@@ -36,7 +41,7 @@ if (isset($_POST['ubah'])) {
 
 global $koneksi;
 $select = mysqli_query($koneksi, "SELECT * FROM jam_masuk");
-$r = mysqli_fetch_array($select);
+foreach ($select as $jammasuk):
 
  ?>
 
@@ -50,8 +55,8 @@ $r = mysqli_fetch_array($select);
 					<tr>
 					<td><b>Jam Masuk</b></td>
 					<td>
-						<input type="text" name="id" value="<?=$r['id'];?>" hidden>
-						<input type="text" name="jam_masuk" class="form-control" placeholder="Contoh : 0900" value="<?=$r['jam_masuk'];?>">
+						<input type="text" name="id" value="<?=$jammasuk['id'];?>" hidden>
+						<input type="text" name="jam_masuk" class="form-control" placeholder="Contoh : 0900" value="<?='0'.number_format($jammasuk['jam_masuk'], 2, '.', '' );?>">
 					</td>
 					</tr>
 				
@@ -64,6 +69,7 @@ $r = mysqli_fetch_array($select);
 			                    <i class="fa fa-edit"></i>
 			                  </button>
 			                </form>
+			            <?php endforeach; ?>
 
                 <!-- modal edit akun -->
 
@@ -76,7 +82,57 @@ $r = mysqli_fetch_array($select);
 			</table>
 		</div>
 	</div>
+</div>
+
+<div class="row">
+				<div class="col-sm-12"><br>
+					<!-- Button trigger modal -->
+<?php 
+
+global $koneksi;
+$select = mysqli_query($koneksi, "SELECT * FROM jam_keluar");
+foreach ($select as $jamkeluar):
+
+ ?>
+
+<!-- Tabel -->
+<div class="row">
+	<div class="col-sm-12">
+		<div class="table-responsive">
+			<table class="table-responsive table-borderless table-earning">
+				<form action="" method="POST">
+				<tbody>
+					<tr>
+					<td><b>Jam Keluar</b></td>
+					<td>
+						<input type="text" name="id" value="<?=$jamkeluar['id'];?>" hidden>
+						<input type="text" name="jam" class="form-control" placeholder="Contoh : 0900" value="<?= '0'.number_format($jamkeluar['jam'],2,'.','');?>">
+					</td>
+					</tr>
+				
+	
+					<tr>
+						<td>
+
+								
+			                  <button type="submit" class="btn btn-info datapotensi" name="ubah_jam_keluar" data-toggle="tooltip" title="Edit">
+			                    <i class="fa fa-edit"></i>
+			                  </button>
+			                </form>
+			            <?php endforeach; ?>
+
+                <!-- modal edit akun -->
+
+                 <!-- Modal edit -->
+
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
+</div>
 	 
 <!-- end table -->
   

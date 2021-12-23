@@ -100,6 +100,14 @@ showTime();
 
 showTime2();
     </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        function sweetAlert(){
+        var name = document.getElementById("nama").innerHTML;
+        swal("Welcome "+name);
+    }
+    </script>
 </body>
 
 </html>

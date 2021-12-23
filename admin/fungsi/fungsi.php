@@ -206,8 +206,22 @@ function ubah_jam_masuk()
 	global $koneksi;
 	$id = $_POST['id'];
 	$jam_masuk = $_POST['jam_masuk'];
+	$new_jam_masuk = explode('.',$jam_masuk);
+	$array_jam_masuk = $new_jam_masuk[0]+$new_jam_masuk[1];
+	$update = mysqli_query($koneksi, "UPDATE jam_masuk SET jam_masuk = '$array_jam_masuk' WHERE id='$id'");
+	if ($update) {
+		echo '<script>return swal("Good job!", "You clicked the button!", "success");</script>';
+	}
+}
 
-	$update = mysqli_query($koneksi, "UPDATE jam_masuk SET jam_masuk = '$jam_masuk' WHERE id='$id'");
+function ubah_jam_keluar()
+{
+	global $koneksi;
+	$id = $_POST['id'];
+	$jam = $_POST['jam'];
+	$new_jam_keluar = explode('.',$jam);
+	$array_jam_keluar = $new_jam_keluar[0]+$new_jam_keluar[1];
+	$update = mysqli_query($koneksi, "UPDATE jam_keluar SET jam = '$array_jam_keluar' WHERE id='$id'");
 	if ($update) {
 		echo '<script>alert("ubah jam masuk berhasil!")</script>';
 	}

@@ -21,7 +21,7 @@ if (isset($_POST['go'])) {
   $cari = $_POST['cari'];
   $karyawan = mysqli_query($koneksi, "SELECT * FROM tb_absen WHERE id LIKE '%".$cari."%'");
 }else{
-  $karyawan = mysqli_query($koneksi, "SELECT * FROM tb_absen LIMIT $halaman_awal, $batas");
+  $karyawan = mysqli_query($koneksi, "SELECT * FROM tb_absen WHERE keterangan != 'null' LIMIT $halaman_awal, $batas");
 }
 
 
