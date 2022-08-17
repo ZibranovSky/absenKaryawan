@@ -1,0 +1,5 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^shiroko\.hazthink\.com$
+RewriteRule ^/?$ "https\:\/\/shiroko\.hazthink\.com\/" [R=301,L]
+

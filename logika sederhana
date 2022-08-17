@@ -1,0 +1,18 @@
+logika sederhana: 
+
+jika absen masuk = 1
+jika absen keluar = 1
+
+value awal sebelum absen = 0
+
+
+
+
+
+--------------------------------------------
+jam   | absen_masuk | absen keluar
+-------------------------------------------- --> jika absen masuk
+07.00 |     1		| 		0
+-------------------------------------------- --> jika absen keluar (update)
+05.00 | 	1		| 		1
+--------------------------------------------
