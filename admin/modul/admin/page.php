@@ -6,6 +6,7 @@ if (isset($_POST['simpan'])) {
 }
 
 if (isset($_POST['hapus'])) {
+  echo "<meta http-equiv='refresh' content='0'>";
   hapus_admin();
 }
 

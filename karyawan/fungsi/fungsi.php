@@ -158,6 +158,10 @@ function simpan_absen()
 	$bulan = $_POST['bulan'];
 	$tahun = $_POST['tahun'];
 
+	// lat  & longitude
+	$latitude = $_POST['latitude'];
+	$longitude = $_POST['longitude'];
+
 	// convert bulan
 
 	if ($bulan == 1) {
@@ -194,7 +198,7 @@ function simpan_absen()
 		echo '<script>alert("anda sudah absen masuk untuk hari ini!")</script>';
 	}else{
 		echo '<script>alert("terima kasih")</script>';
-		$res =  mysqli_query($koneksi, "INSERT INTO tb_absen SET nip='$nip', nama='$nama', tanggal='$tanggal', bulan='$newBulan', tahun='$tahun', keterangan='null', kehadiran='Hadir', alasan='null', foto='null', jam='$jam', jam2='$jam2', absen_masuk='1', absen_keluar = '0', jam_keluar='00.00'");
+		$res =  mysqli_query($koneksi, "INSERT INTO tb_absen SET nip='$nip', nama='$nama', tanggal='$tanggal', bulan='$newBulan', tahun='$tahun', keterangan='null', kehadiran='Hadir', alasan='null', foto='null', jam='$jam', jam2='$jam2', latitude='$latitude', longitude='$longitude', absen_masuk='1', absen_keluar = '0', jam_keluar='00.00'");
 	}
 }
 

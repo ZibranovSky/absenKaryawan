@@ -74,10 +74,12 @@ if (isset($_POST['simpan_ket'])) {
               <input type="text" name="bulan" hidden value="<?=$bulan;?>">
               <input type="text" name="tahun" hidden value="<?=$tahun;?>">
               <input type="text" value="<?=$jam2;?>" hidden name="jam2">
+              <input type="text" value="" hidden id="latitude" name="latitude">
+              <input type="text" value="" hidden id="longitude" name="longitude">
 						</td>
 					</tr>
 
-					<tr>
+					<tr> 
 						<td><button type="submit" name="simpan" class="btn btn-success" onclick="return confirm('ingin absen?')">Absen Masuk</button></td>
 
 					</tr>

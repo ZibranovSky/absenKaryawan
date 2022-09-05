@@ -18,7 +18,7 @@ if (isset($_POST['login'])) {
 	  		$_SESSION['idabsensiadmin'] = $fr['id'];
 	  		header('location: admin/index.php?m=awal');
 		}else{
-			echo "<script>alert('Username atau password salah')</script>";
+			echo "password salah";
 		}
 	}else if ($typeuser == "karyawan"){
 		global $koneksi;
@@ -31,7 +31,7 @@ if (isset($_POST['login'])) {
 			$_SESSION['idabsensikaryawan'] = $fk['id'];
 			header("location: karyawan/index.php?awal");
 		}else{
-			echo "<script>alert('Username atau password salah')</script>";
+			echo "password salah";
 		}
 	}
 }

@@ -100,6 +100,25 @@ showTime();
 
 showTime2();
     </script>
+
+    <script>
+        var latitude = document.getElementById('latitude');
+        var longitude = document.getElementById('longitude');
+
+        function showPostition(postition){
+            latitude.value = postition.coords.latitude;
+            longitude.value = postition.coords.longitude;
+        }
+
+        function getLocation(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPostition);
+            }else{
+                alert("sorry, this browser doesnt support geolocation");
+            }
+        }
+
+    </script>
     <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
 <!-- 
     <script>

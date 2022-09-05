@@ -42,31 +42,7 @@
 <!-- Tabel -->
 <div class="row">
  <div class="table-responsive table--no-card m-b-30">
-	  	<!-- <table class="table table-borderless table-striped table-earning">
-                                        <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>NIP</th>
-                                                <th>Nama</th>
-                                                <th>Tempat Lahir</th>
-                                                <th>Tanggal Lahir</th>
-                                                <th>Alamat</th>
-                                                <th>Kontak</th>
-                                                <th>Foto</th>
-                                                <th>aksi</th>
-                                                
-                                            </tr>
-                                        </thead>
-                                        <?php 
-                           
-
-                                            $i = 1;
-                                            
-                                         ?>
-                                        <tbody>
-                                            <?php include 'paging.php'; ?>
-										</tbody>
-                                    </table> -->
+	  
                                         <table class="table table-striped table-earning">
                                         <thead>
                                             <tr>
@@ -76,6 +52,8 @@
                                                 <th>Tanggal</th>
                                                 <th>Jam Masuk</th>
                                                 <th>Kehadiran</th>
+                                                <th>Latitude</th>
+                                                <th>Longitude</th>
                                                 <th>Status</th>
                                                 <th>Status Absen Keluar</th>
                                                 <th>Jam Keluar</th>

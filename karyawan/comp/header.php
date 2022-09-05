@@ -70,7 +70,7 @@
 
 </head>
 
-<body class="animsition" onload="sweetAlert()">
+<body class="animsition" onload="getLocation()">
     <div class="page-wrapper">
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar2">

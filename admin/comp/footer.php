@@ -12,6 +12,8 @@
             </section>
 
 
+
+
   <script src="<?=url()?>vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="<?=url()?>vendor/bootstrap-4.1/popper.min.js"></script>
@@ -46,7 +48,10 @@
         $(document).ready(function() {
     $('#example').DataTable();
 } );
+
     </script>
+
+
 
     <!-- sweet alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

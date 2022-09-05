@@ -48,6 +48,9 @@ foreach ($karyawan as $pro):
 
                               <?php } ?>
                               </td>
+                              <td><?= $pro['latitude']; ?></td>
+                              <td><?= $pro['longitude']; ?></td>
+                              
                               <td>
                                 <?php 
                                 // $jam_masuk = "0800";
@@ -140,8 +143,92 @@ foreach ($karyawan as $pro):
                                 
                                 </div>
                               </div>
-                            </div></td>
+                            </div>
+
+                              <button class="btn btn-primary" data-toggle="modal" data-target="#show_maps<?=$pro['id'];?>">Tampilkan Lokasi Absen</button>
+
+                              <div class="modal fade" id="show_maps<?=$pro['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+
+
+                                      
+                                    <input type="text" id="latitude" hidden value="<?= $pro['latitude'];?>" name="">
+                                    <input type="text" id="longitude" hidden value="<?= $pro['longitude'];?>" name="">
+                                    <input type="text" id="namas" value="<?= $pro['nama']?>" hidden name="">
+                                  <div class="col-6">
+                                    <button class="btn btn-primary" onclick="getLocation()">
+                                              Tampilkan Lokasi Absen
+                                            </button>
+                                      <div id="mapid" class="mt-2" style="width: 450px; height: 400px"></div>
+                                      <br />
+                                      <p id="demo"></p>
+                                    </div>
+                                  </div>
+                                
+                                </div>
+                              </div>
+                            </div>
+
+
+                          </td>
                  
                               </tr> 
+
+
+                              <!-- maps section -->
+                              <script>
+
+                                var latitude = document.getElementById('latitude').value;
+                                var longitude = document.getElementById('longitude').value;
+                                var namas = document.getElementById('namas').value;
+
+                                  function getLocation() {
+                                    if (navigator.geolocation) {
+                                      navigator.geolocation.getCurrentPosition(showPosition);
+                                    } else {
+                                      x.innerHTML = "Browser mu tidak support.";
+                                    }
+                                  }
+
+                                  function showPosition(position) {
+                                //untuk map masukkan lat dan lng ke dalam variabelnya
+                                var mymap = L.map("mapid").setView(
+                                  [latitude, longitude],
+                                  13
+                                );
+                                //ini untuk deskripsi map
+                                L.tileLayer(
+                                  "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw",
+                                  {
+                                    maxZoom: 18,
+                                    attribution:
+                                      'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                                      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                                      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                                    id: "mapbox/streets-v11",
+                                    tileSize: 512,
+                                    zoomOffset: -1,
+                                  }
+                                ).addTo(mymap);
+                              //menambahkan marker letak posisi dengan lat dan lng yang telah didapat sebelumnya
+                                L.marker([latitude, longitude])
+                                  .addTo(mymap)
+                                  .bindPopup(namas);
+                                //digunakan unuk menampilkan text posisi saat ini
+                                x.innerHTML =
+                                  "Latitude: " +
+                                  position.coords.latitude +
+                                  "<br>Longitude: " +
+                                  position.coords.longitude;
+                              }
+                              </script>
                               
                               <?php endforeach; ?>

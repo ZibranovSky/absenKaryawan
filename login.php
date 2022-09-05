@@ -17,11 +17,14 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Sweetalert 2 CSS -->
+    <link rel="stylesheet" href="assets/swal/plugins/sweetalert2/sweetalert2.min.css">
+
 </head>
 <body>
 <div class="loginBox"> <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
         <h3>Login</h3>
-        <form action="proses_login.php" method="POST">
+        <form action="proses_login.php" method="POST" id="form"> 
             <div class="inputBox"> 
             	<input id="uname" autofocus="" autocomplete="off" type="text" name="username" placeholder="Username">
             	<select name="typeuser">
@@ -31,7 +34,7 @@
             	</select> 
             	<input id="pass" type="password" name="password" placeholder="Password"> 
             </div>
-            	<input type="submit" name="login" value="Login">
+            	<input type="submit" name="login" id="btnSubmit" value="Login">
         </form> 
        <!--  <a href="#">Forget Password<br> </a>
         <div class="text-center">
@@ -39,7 +42,18 @@
         </div> -->
         
     </div>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Must put our javascript files here to fast the page loading -->
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Sweetalert2 JS -->
+    <script src="assets/swal/plugins/sweetalert2/sweetalert2.min.js"></script>
+    <!-- Page Script -->
+    <script src="assets/swal/js/scripts.js"></script>
   
 </body>
 </html>

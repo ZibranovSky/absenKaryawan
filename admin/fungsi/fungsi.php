@@ -189,12 +189,20 @@ function hapus_karyawan()
 	$r = mysqli_fetch_array($select);
 	$hapus_foto = $r['foto'];
 
-	if ($r['foto'] != "") {
+	if ($r['username'] == "nemesis") {
+		session_start();
+		unset($_SESSION['idabsensiadmin']);
+		
+	}else if ($r['username'] != "nemesis" ) {
+		if ($r['foto'] != "") {
 		unlink("img/karyawan/$hapus_foto");
 		return mysqli_query($koneksi, "DELETE FROM tb_karyawan WHERE id='$id'");
 	}else{
 		return mysqli_query($koneksi, "DELETE FROM tb_karyawan WHERE id='$id'");
 	}
+ }
+
+	
 }
 
 function select_karyawan()
