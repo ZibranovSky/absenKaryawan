@@ -10,6 +10,7 @@ switch ($modul) {
 	case 'print_rekap': $judul="Print Rekap Absen $nama_app"; include 'print_rekap.php'; break;
 	case 'excel': $judul="Export Excel $nama_app"; include 'excel.php'; break;
 	case 'word': $judul="Export word $nama_app"; include 'word.php'; break;
+	case 'lokasi': $judul = "Lokasi Absensi $nama_app ";  include 'lokasi_absen.php';
 	
 	
 		
