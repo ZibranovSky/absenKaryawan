@@ -31,9 +31,9 @@
            				<option>--Pilih Bulan--</option>
            				<option value="Januari">Januari</option>
            				<option value="Februari">Februari</option>
-           				<option value="Januari">Maret</option>
-           				<option value="Januari">April</option>
-           				<option value="Januari">Mei</option>
+           				<option value="Maret">Maret</option>
+           				<option value="April">April</option>
+           				<option value="Mei">Mei</option>
            				<option value="Juni">Juni</option>
            				<option value="Juli">Juli</option>
            				<option value="Agustus">Agustus</option>
