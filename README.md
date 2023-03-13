@@ -1,5 +1,7 @@
 # absenKaryawan
-Web aplikasi absensi karyawan
+Web aplikasi absensi karyawan <br>
+
+<b><i>Note : Branch Master sudah tidak dikembangkan lagi, untuk versi LTS silahkan pilih branch v2, terima kasih</i></b>
 
 <b>Tentang Web Ini : </b><br>
 Pandemi virus covid-19 membuat masyarakat harus kerja dari rumah atau work from home
