@@ -67,8 +67,7 @@ maka dari itu, dibuatlah web aplikasi ini untuk mempermudah proses absensi.
     <i>Sebelum mengimport database, pastikan anda membuat database sesuai dengan nama database yang ada di dalam folder db, yaitu 'absenkaryawan.sql'</i>
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-Jika ada bagian yang error atau yang ada ingin ditambahkan mohon hubungi :
-1. Discord : royal_fortune19 <br> 
+
 
 
 terima kasih
